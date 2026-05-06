@@ -1,7 +1,7 @@
 ---
 title: The Road To Groups
 author: Nikhil Patel
-date: 5/6/2026
+date: 2026-05-06
 type: blog
 courseNumber: MAT4170
 term: S26
@@ -14,16 +14,15 @@ Normally, groups in this class require four things in order to be classified as 
 
 It is interesting that we keep expanding on the idea of a group, but we have not really explored the bare minimum. By removing most of the requirements of a group and leaving closure, we get a structure called a magma. From magmas we can add associativity to get semigroups. From semigroups if we add the existence of an identity element we get monoids, which then leaves adding in the property of inverses in order to finally get to groups.
 
-<div align="center">
+<figure>
   <img width="200" height="400" alt="Structure_Hierarchy" src="Structure_Hierarchy.png" />
-</div>
-
+</figure>
 
 # Magma
 
 ## Definition
 
-A magma is a set $M$ that has a single binary operation $*$ that satisfies only one rule: closure. This means that for any two elements $a, b \in M$, the result $a * b$ must also be in $M$.
+A magma is a set $M$ that has a single binary operation $*$ that satisfies only one rule: closure. This means that for any two elements $a, b \\in M$, the result $a * b$ must also be in $M$.
 
 ## Why Does This Matter
 
@@ -34,22 +33,22 @@ Magmas give a baseline from which every other algebraic structure is built by ad
 
 ### Rock, Paper, Scissors
 
-<div align="center">
-  <img width="400" height="" alt="Rock,Paper,Scissors" src="Rock,Paper,Scissors.png" />
-</div>
+<figure>
+  <img width="400" height="" alt="Rock,Paper,Scissors" src="Rock_Paper_Scissors.png" />
+</figure>
 
-Consider the set $\{R, P, S\}$, where $a * b$ is defined as the winner of the match, where
+Consider the set $\\{R, P, S\\}$, where $a * b$ is defined as the winner of the match, where
 
 $$
-\begin{aligned}
-R * P &= P \\
-R * S &= R \\
+\\begin{aligned}
+R * P &= P \\\\
+R * S &= R \\\\
 S * P &= S
-\end{aligned}
+\\end{aligned}
 $$
 
 
-This set is closed because any match between elements of $\{R, P, S\}$ results in an element still in the set.
+This set is closed because any match between elements of $\\{R, P, S\\}$ results in an element still in the set.
 
 This operation fails associativity from the image provided because
 
@@ -73,7 +72,7 @@ Some other examples of magmas are the integers under subtraction, non zero integ
 
 ## Definition
 
-Next on the hierarchy after magmas is semigroups.  A semigroup is just a magma with the added rule of requiring associativity. Now, for any $a,b \in M$ we also need
+Next on the hierarchy after magmas is semigroups.  A semigroup is just a magma with the added rule of requiring associativity. Now, for any $a,b \\in M$ we also need
 
 $$
 (a * b) * c = a * (b * c).
@@ -87,11 +86,11 @@ Every structure from a semigroup and onwards on the hierarchy of algebraic struc
 
 ## Example
 
-An example of a semigroup is the natural numbers (not including zero) under addition, $(\mathbb{N},+)$. Let $a,b \in \mathbb{N}$. There is closure because $a + b \in \mathbb{N}$ and there is associativity because 
+An example of a semigroup is the natural numbers (not including zero) under addition, $(\\mathbb{N},+)$. Let $a,b \\in \\mathbb{N}$. There is closure because $a + b \\in \\mathbb{N}$ and there is associativity because
 
 $$
 (a + b) + c = a + (b + c).
-$$ 
+$$
 
 Notice that there is no inverse because the inverse of $a$ would need to be $-a$ which does not exists in the bound of natural numbers. Thus, the natural numbers (not including zero) under addition is a semigroup. I will talk about what happens if we include zero later.
 
@@ -100,7 +99,7 @@ Notice that there is no inverse because the inverse of $a$ would need to be $-a$
 
 ## Definition
 
-Adding on to the rules of a semigroup we can get to monoids. A monoid is a semigroup that has an identity element where there exists some $e \in M$ such that for any $a \in M$,
+Adding on to the rules of a semigroup we can get to monoids. A monoid is a semigroup that has an identity element where there exists some $e \\in M$ such that for any $a \\in M$,
 
 $$
 e * a = a * e = a.
@@ -119,22 +118,22 @@ $$
 0 + a = a + 0 = a
 $$
 
-for any $a \in \mathbb{N}$.
+for any $a \\in \\mathbb{N}$.
 
 ## Free Monoids
 The most simple monoid is known as the free monoid. This starts with a set of generators, like letters, and consists of all possible strings that can be made with them. It also contains an empty string in order to have an identity element. This is common when the binary operation is concatenation. It is known as free because, for example, if there are generators $a$ and $b$, the sequence $ab$ is not the same as the sequence $ba$.
 
 ### Example
 
-Let $A$ be the set of letters ${a,b,c}$. Let $S$ be the set of all finite strings formed from A, including the empty string $e$. Let $\*$ being the binary operation of concatenation. This has the property of closure because for any two strings $x,y \in S$, the concatenation of $x*y$ is a new finite string that is in $S$.
+Let $A$ be the set of letters $\\{a,b,c\\}\$. Let $S$ be the set of all finite strings formed from A, including the empty string $e$. Let $\*$ being the binary operation of concatenation. This has the property of closure because for any two strings $x,y \\in S$, the concatenation of $x\*y$ is a new finite string that is in $S$.
 
-This has associativity  because, for any $x,y,x \in S$
+This has associativity  because, for any $x,y,x \\in S$
 
 $$
 (x * y) * z = x * (y * z) = xyz.
 $$
 
-The identity also exists because of the inclusion of the empty string because, for any $x \in S$,
+The identity also exists because of the inclusion of the empty string because, for any $x \\in S$,
 
 $$
 x * e = x * e = x.
