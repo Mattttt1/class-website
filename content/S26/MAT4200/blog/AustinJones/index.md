@@ -131,7 +131,7 @@ I would like to thank my group partners Justin Chrien and Kyle Teats for their h
 ## References
 Tu, Loring, "An Introduction to Manifolds", 2nd Edition, Universitext.
 
-Sean M. Carroll, "Lecture Notes on General Relativity![Uploading sets_to_manifolds.jpg…]
+Sean M. Carroll, "Lecture Notes on General Relativity!"
 
 Gorodski, Claudio, "An introduction to Riemannian geometry", Preliminary Version 3, IME.
 
